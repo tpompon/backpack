@@ -9,6 +9,7 @@ import { useNavigation, useBlockchainTokensSorted } from "@coral-xyz/recoil";
 import { TransferWidget } from "./TransferWidget";
 import { BalanceSummaryWidget } from "./BalanceSummaryWidget";
 import { TokenTables } from "../../common/TokenTable";
+import NetworkStatus from "../../common/NetworkStatus";
 
 export type Token = ReturnType<typeof useBlockchainTokensSorted>[number];
 
@@ -28,6 +29,7 @@ export function Balances() {
 
   return (
     <div>
+      <NetworkStatus />
       <BalanceSummaryWidget />
       <div
         style={{
